@@ -40,7 +40,7 @@ pip install -r requirements.txt
 ## Usage
 
 1. **Prepare your WhatsApp chat export:** Export the chat history from WhatsApp in .txt format.
-2. **Execute the Jupyter Notebooks:** Run the Jupyter Notebooks to analyze the chats and export them as a CSV file.
+2. **Execute the Jupyter Notebooks:** Run the Jupyter Notebooks to analyze the chats and export them as a CSV file for further analysis if required.
 
 ---
 
