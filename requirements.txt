@@ -1,0 +1,14 @@
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+wordcloud
+networkx
+scikit-learn
+textblob
+gensim
+nltk
+emoji
+torch
+transformers
