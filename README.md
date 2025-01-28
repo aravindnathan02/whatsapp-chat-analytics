@@ -4,13 +4,13 @@
 
 ## Overview
 
-This project provides an in-depth analysis of WhatsApp chat data, offering insights into message trends, most active users, word frequency, sentiment analysis, and more. It allows users to visualize and interpret chat histories, helping uncover valuable conversation patterns.
+This project provides a comprehensive analysis of WhatsApp chat data, utilizing various techniques such as data parsing, exploratory data analysis (EDA), sentiment analysis, emoji sentiment analysis, and advanced natural language processing with BERT. The goal is to extract meaningful insights from chat interactions and understand user engagement patterns.
 
 ---
 
 ## Dataset
 
-- **Source:** Whatsapp Chat data
+- **Source:** Whatsapp Chat export  files (in `.txt` format).
 - **Features:** Timestamp, Sender, Message
 - **Note:** This repository has no dataset for privacy purposes.
 
@@ -18,47 +18,66 @@ This project provides an in-depth analysis of WhatsApp chat data, offering insig
 
 ## Features
 
-- **Message Parsing:** Parses the data from raw text data in an ordered manner using regex.
-- **Message Frequency Analysis:** Visualizes the distribution of messages over time (hourly, daily, monthly).
-- **User Activity Analysis:** Identifies the most active users based on the number of messages sent.
-- **Word Cloud Generation:** Displays the most frequently used words in the chat.
-- **Sentiment Analysis:** Classifies messages and emojis based on sentiment (positive, negative, neutral).
-- **Message Length Distribution:** Analyzes the length of messages across different users.
-- **Time-based Insights:** Investigate chat patterns during specific times of the day, month, and year.
-- **Topic modeling:** Performs topic modeling using Latent Dirichlet Allocation (LDA) and calculates coherence scores.
-- **Conversation clustering:** Creates clusters of chat messages to indicate various conversation topics using pre-trained BERT model and K-means clustering.
+- **Chat Data Parsing:** Efficiently parse WhatsApp chat files to extract timestamps, senders, messages, and message length.
+- **Data Cleaning:** Remove irrelevant entries to enhance data quality for analysis.
+- **Exploratory Data Analysis (EDA):** Visualize messaging patterns, including daily message volume and sender statistics.
+- **Sentiment Analysis:** Classify messages into positive, negative, and neutral sentiments, providing insights into user emotions.
+- **Emoji Sentiment Analysis:** Analyze emoji usage and their sentiment impact on conversations.
+- **BERT-based Semantic Analysis:** Utilize BERT embeddings for clustering conversations and uncovering key interaction themes.
+
+---
+
+## Technologies Used
+
+- Python
+- NumPy
+- Pandas
+- Matplotlib
+- Seaborn
+- Emoji
+- NLTK
+- Scikit-learn
+- Gensim
+- Transformers (BERT)
+- NetworkX
+- WordCloud
+- TextBlob
+- Torch
 
 ---
 
 ## Setup
 
 1. Clone this repository:
-```
+```bash
 git clone https://github.com/aravindnathan02/whatsapp-chat-analytics.git
 ```
 
 2. Navigate to the repository:
-```
+```bash
 cd whatsapp-chat-analytics
 ```
 
 3. Install the required dependencies:
-```
+```bash
 pip install -r requirements.txt
 ```
 
 4. Export your desired Whatsapp Chat for Analysis:
-```
+```bash
 Whatsapp Chat --> Options --> More --> Export Chat (without media)
 ```
 
 ---
 
-## Project Workflow
+## Usage
 
-1. **Data Preprocessing:** Convert the raw data into organized data.
-2. **Exploratory Data Analysis (EDA):** Understand the dataset to uncover patterns and generate a word cloud.
-3. **Communication Network Analysis:** Build a conversation network graph based on message sequences (useful while analyzing group chats).
-4. **Sentiment Analysis:** Extensive topic modeling using LDA and sentiment analysis on the messages.
-5. **Emoji Sentiment Analysis:** Perform sentiment analysis on emojis on each sender and calculate overall emoji sentiment.
-6. **BERT Analysis:** Generate embeddings through a pre-trained BERT model and visualize conversation clusters using K-means and t-SNE.
+1. Place your WhatsApp chat text file (e.g., `WhatsApp_Chat.txt`) in the project directory.
+2. Run the Jupyter notebooks in the following order:
+    - 1_data_preprocessing.ipynb: Parse and clean the chat data.
+    - 2_exploratory_data_analysis.ipynb: Perform EDA and visualize results.
+    - 3_communication_network_analysis.ipynb: Visualize the communication network.
+    - 4_sentiment_analysis.ipynb: Analyze message sentiment and its distribution.
+    - 5_emoji_sentiment_analysis.ipynb: Analyze emoji usage and its sentiment.
+    - 6_bert_analysis.ipynb: Conduct semantic analysis using BERT.
+
